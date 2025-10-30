@@ -20,7 +20,7 @@
             margin: 0 auto;
             background-color: #e6f0ff;
             border-collapse: collapse;
-            width: 60%;
+            width: 70%;
             box-shadow: 0 0 10px rgba(0,0,0,0.2);
         }
 
@@ -33,22 +33,28 @@
             text-align: right;
             font-weight: bold;
             color: #003366;
-            width: 40%;
+            width: 35%;
         }
 
         td.input {
             text-align: left;
-            width: 60%;
+            width: 65%;
         }
 
         input[type="text"],
         input[type="email"],
         input[type="tel"],
-        input[type="datetime-local"] {
+        input[type="datetime-local"],
+        select {
             width: 90%;
             padding: 8px;
             border: 1px solid #ccc;
             border-radius: 4px;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 8px;
         }
 
         input[type="submit"] {
@@ -90,8 +96,40 @@
                 <td class="input"><input type="datetime-local" id="dep" name="departure"></td>
             </tr>
             <tr>
+                <td class="label">Room Type:</td>
+                <td class="input">
+                    <select name="room_type" id="room_type">
+                        <option value="single">Single</option>
+                        <option value="double">Double</option>
+                        <option value="suite">Presidential Suite</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Preferences:</td>
+                <td class="input">
+                    <label><input type="checkbox" name="pref" value="non-smoking">Non Smoking</label><br>
+                    <label><input type="checkbox" name="pref" value="internet">Internet</label><br>
+                    <label><input type="checkbox" name="pref" value="firm-mattress">Firm Mattress</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Mode of Payment:</td>
+                <td class="input">
+                    <label><input type="radio" name="payment" value="cash">Cash</label><br>
+                    <label><input type="radio" name="payment" value="check">Check</label><br>
+                    <label><input type="radio" name="payment" value="card">Credit Card</label><br>
+                    <select name="card_type" id="card_type">
+                        <option value="">--Select Card Type--</option>
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">MasterCard</option>
+                        <option value="amex">American Express</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
                 <td colspan="2" style="text-align:center;">
-                    <input type="submit" value="Submit Reservation">
+                    <input type="submit" value="Send Reservation">
                 </td>
             </tr>
         </table>
