@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continental Hotel Reservation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #003366;
+        }
+
+        table {
+            margin: 0 auto;
+            background-color: #e6f0ff;
+            border-collapse: collapse;
+            width: 60%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            border: 1px solid #003366;
+        }
+
+        td.label {
+            text-align: right;
+            font-weight: bold;
+            color: #003366;
+            width: 40%;
+        }
+
+        td.input {
+            text-align: left;
+            width: 60%;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="datetime-local"] {
+            width: 90%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0055aa;
+        }
+    </style>
+</head>
+<body>
+    <h1>Continental Hotel Reservation Form</h1>
+    <form action="/action_page.php">
+        <table>
+            <tr>
+                <td class="label"><label for="fname">Name:</label></td>
+                <td class="input"><input type="text" id="fname" name="fname"></td>
+            </tr>
+            <tr>
+                <td class="label"><label for="email">Email:</label></td>
+                <td class="input"><input type="email" id="email" name="email"></td>
+            </tr>
+            <tr>
+                <td class="label"><label for="phone">Phone Number:</label></td>
+                <td class="input"><input type="tel" id="phone" name="phone"></td>
+            </tr>
+            <tr>
+                <td class="label"><label for="arr">Arrival Time:</label></td>
+                <td class="input"><input type="datetime-local" id="arr" name="arrival"></td>
+            </tr>
+            <tr>
+                <td class="label"><label for="dep">Departure:</label></td>
+                <td class="input"><input type="datetime-local" id="dep" name="departure"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center;">
+                    <input type="submit" value="Submit Reservation">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
